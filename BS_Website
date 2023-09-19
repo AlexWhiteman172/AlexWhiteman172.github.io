@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#interests">Interests</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="introduction" class="shape-color">
+            <h2>Introduction</h2>
+            <p>Hello, my name is [Your Name]. This is a brief introduction about me.</p>
+        </section>
+
+        <section id="education" class="shape-color">
+            <h2>Education</h2>
+            <p>Write about your educational background here.</p>
+        </section>
+
+        <section id="experience" class="shape-color">
+            <h2>Work Experience</h2>
+            <p>Describe your work experience and professional achievements.</p>
+        </section>
+
+        <section id="interests" class="shape-color">
+            <h2>Interests</h2>
+            <p>Share your hobbies and interests.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact me at [Your Email Address]</p>
+    </footer>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function getRandomShape() {
+            const shapes = ['circle', 'square', 'triangle'];
+            return shapes[Math.floor(Math.random() * shapes.length)];
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.shape-color');
+            
+            sections.forEach(section => {
+                const randomColor = getRandomColor();
+                const randomShape = getRandomShape();
+                
+                section.style.backgroundColor = randomColor;
+                
+                if (randomShape === 'circle') {
+                    section.style.borderRadius = '50%';
+                } else if (randomShape === 'triangle') {
+                    section.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
