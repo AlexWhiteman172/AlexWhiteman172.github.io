@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .shape-color {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            color: white; /* Text color */
+        }
+
+        .shape-color p {
+            position: relative;
+            z-index: 1; /* Place text in front of shapes */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -55,7 +72,7 @@
         }
 
         function getRandomShape() {
-            const shapes = ['circle', 'square', 'triangle'];
+            const shapes = ['circle', 'square', 'diamond', 'pentagon', 'star', 'heart', 'octagon', 'hexagon', 'oval'];
             return shapes[Math.floor(Math.random() * shapes.length)];
         }
 
@@ -71,9 +88,27 @@
                 if (randomShape === 'circle') {
                     section.style.borderRadius = '50%';
                     section.style.clipPath = 'none'; // Reset clipPath for circles
-                } else if (randomShape === 'triangle') {
-                    section.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
-                    section.style.borderRadius = '0'; // Reset border-radius for triangles
+                } else if (randomShape === 'diamond') {
+                    section.style.clipPath = 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)';
+                    section.style.borderRadius = '0'; // Reset border-radius for diamonds
+                } else if (randomShape === 'pentagon') {
+                    section.style.clipPath = 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)';
+                    section.style.borderRadius = '0'; // Reset border-radius for pentagons
+                } else if (randomShape === 'star') {
+                    section.style.clipPath = 'polygon(50% 0%, 61.8% 38.2%, 95.1% 38.2%, 68.2% 61.8%, 79.5% 95.1%, 50% 76.4%, 20.5% 95.1%, 31.8% 61.8%, 5% 38.2%, 38.2% 38.2%)';
+                    section.style.borderRadius = '0'; // Reset border-radius for stars
+                } else if (randomShape === 'heart') {
+                    section.style.clipPath = 'polygon(50% 0%, 61.8% 17.6%, 61.8% 38.2%, 50% 56.1%, 38.2% 38.2%, 38.2% 17.6%)';
+                    section.style.borderRadius = '0'; // Reset border-radius for hearts
+                } else if (randomShape === 'octagon') {
+                    section.style.clipPath = 'polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%)';
+                    section.style.borderRadius = '0'; // Reset border-radius for octagons
+                } else if (randomShape === 'hexagon') {
+                    section.style.clipPath = 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
+                    section.style.borderRadius = '0'; // Reset border-radius for hexagons
+                } else if (randomShape === 'oval') {
+                    section.style.clipPath = 'ellipse(50% 50% at 50% 50%)';
+                    section.style.borderRadius = '0'; // Reset border-radius for ovals
                 } else {
                     section.style.borderRadius = '0'; // Reset border-radius for squares
                     section.style.clipPath = 'none'; // Reset clipPath for squares
