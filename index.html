@@ -59,7 +59,7 @@
             return shapes[Math.floor(Math.random() * shapes.length)];
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
+        function updateColorsAndShapes() {
             const sections = document.querySelectorAll('.shape-color');
             
             sections.forEach(section => {
@@ -70,11 +70,19 @@
                 
                 if (randomShape === 'circle') {
                     section.style.borderRadius = '50%';
+                    section.style.clipPath = 'none'; // Reset clipPath for circles
                 } else if (randomShape === 'triangle') {
                     section.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
+                    section.style.borderRadius = '0'; // Reset border-radius for triangles
+                } else {
+                    section.style.borderRadius = '0'; // Reset border-radius for squares
+                    section.style.clipPath = 'none'; // Reset clipPath for squares
                 }
             });
-        });
+        }
+
+        setInterval(updateColorsAndShapes, 1000); // Update every second
+        updateColorsAndShapes(); // Initial update
     </script>
 </body>
 </html>
