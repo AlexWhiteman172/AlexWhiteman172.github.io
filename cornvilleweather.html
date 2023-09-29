@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornville Weather</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Welcome to Cornville Weather</h1>
+    
+    <p>Today's Weather: <span id="weather-message"></span></p>
+
+    <script>
+        const weatherMessages = [
+            "Sunny with a chance of acid rain and fires",
+            "Partly cloudy with the entire sahara desert at your doorstep",
+            "Thunderstorms of rabid dogs",
+            "Windy with a hint of sausages",
+            "Foggy with a possibility of runaway trains",
+            "Clear skies and a moon made of cheese",
+            // Add more weather messages here
+        ];
+
+        function displayRandomWeatherMessage() {
+            const randomIndex = Math.floor(Math.random() * weatherMessages.length);
+            const randomMessage = weatherMessages[randomIndex];
+
+            // Display the random weather message on your webpage
+            const messageElement = document.getElementById("weather-message");
+            messageElement.textContent = randomMessage;
+        }
+
+        // Call the function when the page loads to show a random weather message
+        window.onload = displayRandomWeatherMessage;
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+    <img src="https://westernnews.media.clients.ellingtoncms.com/img/photos/2021/06/14/Backhoe_Cornville_fire_1.JPG" alt="cornville" width="400" height="300">
+</body>
+</html>
