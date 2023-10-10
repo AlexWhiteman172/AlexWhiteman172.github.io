@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,8 +38,22 @@
             display: block;
         }
 
+        /* Center the images */
+        .shape-color img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* Ensure the image doesn't exceed the container width */
+            max-height: 100%; /* Ensure the image doesn't exceed the container height */
+        }
+
+        .section-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; /* Set the desired height for the image containers */
+        }
               
-.nice-button {
+        .nice-button {
             background-color: #ab0202;
             color: #ffffff;
             padding: 5px 10px;
@@ -56,29 +70,29 @@
 <body>
     <nav>
         <button class="nice-button">
-        <a href="cornvillemainpage.html"> to cornville </a> 
+            <a href="cornvillemainpage.html"> to cornville </a> 
         </button>
 
         <br>
-         <br>
+        <br>
 
-           <button class="nice-button">
-         <a href="monkeyBalls.html"> to the monkey balls site </a> 
-           </button>
+        <button class="nice-button">
+            <a href="monkeyBalls.html"> to the monkey balls site </a> 
+        </button>
 
-<br>
- <br>
+        <br>
+        <br>
 
-                  <button class="nice-button">
-          <a href="binairstelsel.html"> to 01100010 01101001 01101110 01100001 01110010 01111001 </a> 
-                  </button>
+        <button class="nice-button">
+            <a href="binairstelsel.html"> to 01100010 01101001 01101110 01100001 01110010 01111001 </a> 
+        </button>
 
-<br>
- <br>
+        <br>
+        <br>
 
-                         <button class="nice-button">
-        <a href="kleurmodellen.html"> to KLEURMODELLEN </a> 
-                         </button>
+        <button class="nice-button">
+            <a href="kleurmodellen.html"> to KLEURMODELLEN </a> 
+        </button>
     </nav>
 
     <header>
@@ -90,28 +104,36 @@
             <p>Hello, I am Alexander. I live in a small village called Vijfhuizen. I have lived there almost my entire life. I live in a large house with my parents, and little brother and sister. I also have a dog, and two cats. My favorite food is chicken McNuggets with Heinz tomato ketchup.</p>
         </section>
 
-    <img src="https://westernnews.media.clients.ellingtoncms.com/img/photos/2021/06/14/Backhoe_Cornville_fire_1.JPG" alt="cornville" width="400" height="300">
+        <div class="section-image-container">
+            <img src="https://westernnews.media.clients.ellingtoncms.com/img/photos/2021/06/14/Backhoe_Cornville_fire_1.JPG" alt="cornville" width="400" height="300">
+        </div>
         
         <section id="education" class="shape-color">
             <h2>Education</h2>
             <p>I went to school in my village for 7 years. The school I went to doesn't exist anymore. This is now my fourth year at this school. I do VWO niveau.</p>
         </section>
 
-    <img src="https://westernnews.media.clients.ellingtoncms.com/img/photos/2021/06/14/Backhoe_Cornville_fire_1.JPG" alt="cornville" width="400" height="300">
+        <div class="section-image-container">
+            <img src="https://westernnews.media.clients.ellingtoncms.com/img/photos/2021/06/14/Backhoe_Cornville_fire_1.JPG" alt="cornville" width="400" height="300">
+        </div>
         
         <section id="experience" class="shape-color">
             <h2>Work Experience</h2>
             <p>I have no work experience.</p>
         </section>
 
+        <div class="section-image-container">
             <img src="https://westernnews.media.clients.ellingtoncms.com/img/photos/2021/06/14/Backhoe_Cornville_fire_1.JPG" alt="cornville" width="400" height="300">
+        </div>
 
         <section id="interests" class="shape-color">
             <h2>Hobbies and Interests</h2>
             <p>I like sports, and I currently do hockey, skiing, and freerunning. I also like reading, cycling on my e-bike, and gaming.</p>
         </section>
 
-    <img src="https://westernnews.media.clients.ellingtoncms.com/img/photos/2021/06/14/Backhoe_Cornville_fire_1.JPG" alt="cornville" width="400" height="300">
+        <div class="section-image-container">
+            <img src="https://westernnews.media.clients.ellingtoncms.com/img/photos/2021/06/14/Backhoe_Cornville_fire_1.JPG" alt="cornville" width="400" height="300">
+        </div>
         
     </main>
 
